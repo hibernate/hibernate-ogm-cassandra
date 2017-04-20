@@ -18,7 +18,7 @@
     <artifactId>hibernate-ogm-cassandra-javadoc</artifactId>
     <packaging>jar</packaging>
 
-    <name>Hibernate OGM Cotrib Javadoc</name>
+    <name>Hibernate OGM Cassandra Javadoc</name>
     <description>Hibernate OGM helper module to build aggregated javadoc</description>
 
     <properties>
@@ -39,18 +39,6 @@
         </dependency>
         <!-- We also need our own module dependencies so that
             we import all types from dependant modules -->
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-ehcache</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-couchdb</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-redis</artifactId>
-        </dependency>
         <dependency>
             <groupId>org.hibernate.ogm</groupId>
             <artifactId>hibernate-ogm-cassandra</artifactId>
@@ -89,9 +77,6 @@
                         </dependency>
                     </additionalDependencies>
                     <sourcepath>
-                        ${basedir}/../../ehcache/src/main/java;
-                        ${basedir}/../../couchdb/src/main/java;
-                        ${basedir}/../../redis/src/main/java;
                         ${basedir}/../../cassandra/src/main/java;
                     </sourcepath>
                     <show>public</show>

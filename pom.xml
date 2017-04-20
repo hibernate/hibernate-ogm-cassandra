@@ -17,13 +17,11 @@
     <artifactId>hibernate-ogm-cassandra-parent</artifactId>
     <packaging>pom</packaging>
 
-    <name>Hibernate OGM Contrib Aggregator</name>
-    <description>Hibernate OGM Contrib Aggregator POM</description>
+    <name>Hibernate OGM Cassandra Aggregator</name>
+    <description>Hibernate OGM Cassandra Aggregator POM</description>
 
     <modules>
-        <module>couchdb</module>
         <module>cassandra</module>
-        <module>redis</module>
     </modules>
 
     <properties>
@@ -48,15 +46,6 @@
         <jgroups.bind_addr>127.0.0.1</jgroups.bind_addr>
         <skipUnitTests>false</skipUnitTests>
 
-        <!-- Redis -->
-        <lettuceVersion>4.2.1.Final</lettuceVersion>
-        <lettuceRxjavaVersion>1.1.6</lettuceRxjavaVersion>
-        <lettuceCommonsPoolVersion>2.4.2</lettuceCommonsPoolVersion>
-        <lettuceGuavaVersion>18.0</lettuceGuavaVersion> <!-- Currently in sync with the version of Wildfly -->
-
-        <!-- Ehcache -->
-        <ehcacheVersion>2.6.11</ehcacheVersion>
-
         <!-- Cassandra -->
         <cassandraVersion>3.1.0</cassandraVersion>
         <!-- Update dependency versions accordingly when updating C*  -->
@@ -69,8 +58,6 @@
 
         <!-- Guava version for Cassandra-->
         <cassandraGuavaVersion>16.0.1</cassandraGuavaVersion>
-
-        <hibernate-search.module.slot>${hibernateSearchVersion}-orm51</hibernate-search.module.slot>
 
         <!-- Target version of WildFly (for testing and JipiJapa integration) -->
         <version.wildfly>10.1.0.Final</version.wildfly>
@@ -762,11 +749,9 @@
         <profile>
             <id>non-jigsaw</id>
             <activation>
-                <!-- The versions we're using of Ehcache, Infinispan and Neo4J won't work on JDK9. Needs upgrading.  -->
                 <jdk>1.8</jdk>
             </activation>
             <modules>
-                <module>ehcache</module>
                 <!-- The WildFly modules require the other modules to be enabled too -->
                 <module>modules</module>
             </modules>

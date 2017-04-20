@@ -22,12 +22,8 @@
     <properties>
         <module.xml.basedir>${basedir}/src/main/modules</module.xml.basedir>
         <module.xml.aliases.basedir>${basedir}/src/main/aliases</module.xml.aliases.basedir>
-		<hibernate.ogm.module.slot>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}</hibernate.ogm.module.slot>
-        <hibernate.ogm.ehcache.module.slot>${hibernate.ogm.module.slot}</hibernate.ogm.ehcache.module.slot>
+         <hibernate.ogm.module.slot>${parsedVersion.majorVersion}.${parsedVersion.minorVersion}</hibernate.ogm.module.slot>
         <hibernate.ogm.cassandra.module.slot>${hibernate.ogm.module.slot}</hibernate.ogm.cassandra.module.slot>
-        <hibernate.ogm.couchdb.module.slot>${hibernate.ogm.module.slot}</hibernate.ogm.couchdb.module.slot>
-        <hibernate.ogm.redis.module.slot>${hibernate.ogm.module.slot}</hibernate.ogm.redis.module.slot>
-        <hibernate.hql.module.slot>${hibernateHqlParserVersion}</hibernate.hql.module.slot>
     </properties>
 
     <dependencyManagement>
@@ -45,22 +41,7 @@
     <dependencies>
         <dependency>
             <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-ehcache</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-couchdb</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
             <artifactId>hibernate-ogm-cassandra</artifactId>
-            <optional>true</optional>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-redis</artifactId>
             <optional>true</optional>
         </dependency>
     </dependencies>

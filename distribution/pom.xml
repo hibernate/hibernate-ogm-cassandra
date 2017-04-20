@@ -17,7 +17,7 @@
     <artifactId>hibernate-ogm-cassandra-distribution</artifactId>
     <packaging>pom</packaging>
 
-    <name>Hibernate OGM Contrib Distribution</name>
+    <name>Hibernate OGM Cassandra Distribution</name>
     <description>Creates the distribution package for Hibernate OGM contrib</description>
 
     <properties>
@@ -37,48 +37,13 @@
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
             </plugin>
-            <plugin>
-                <artifactId>maven-dependency-plugin</artifactId>
-                <executions>
-                    <execution>
-                        <id>guava-for-lettuce-redis</id>
-                        <phase>prepare-package</phase>
-                        <goals>
-                            <goal>copy</goal>
-                        </goals>
-                        <configuration>
-                            <artifactItems>
-                                <artifactItem>
-                                    <groupId>com.google.guava</groupId>
-                                    <artifactId>guava</artifactId>
-                                    <version>${lettuceGuavaVersion}</version>
-                                    <type>jar</type>
-                                </artifactItem>
-                           </artifactItems>
-                            <outputDirectory>${project.build.directory}/lib/redis</outputDirectory>
-                        </configuration>
-                    </execution>
-                </executions>
-            </plugin>
         </plugins>
     </build>
 
     <dependencies>
         <dependency>
             <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-ehcache</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-couchdb</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
             <artifactId>hibernate-ogm-cassandra</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-redis</artifactId>
         </dependency>
     </dependencies>
 
