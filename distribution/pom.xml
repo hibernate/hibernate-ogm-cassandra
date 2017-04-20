@@ -14,14 +14,14 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>hibernate-ogm-contrib-distribution</artifactId>
+    <artifactId>hibernate-ogm-cassandra-distribution</artifactId>
     <packaging>pom</packaging>
 
     <name>Hibernate OGM Contrib Distribution</name>
     <description>Creates the distribution package for Hibernate OGM contrib</description>
 
     <properties>
-        <assembly.name>hibernate-ogm-contrib-${project.version}</assembly.name>
+        <assembly.name>hibernate-ogm-cassandra-${project.version}</assembly.name>
         <maven.deploy.skip>true</maven.deploy.skip>
     </properties>
 
@@ -96,7 +96,7 @@
             <dependencies>
                 <dependency>
                     <groupId>org.hibernate.ogm</groupId>
-                    <artifactId>hibernate-ogm-contrib-javadoc</artifactId>
+                    <artifactId>hibernate-ogm-cassandra-javadoc</artifactId>
                     <version>${project.version}</version>
                     <classifier>javadoc</classifier>
                 </dependency>

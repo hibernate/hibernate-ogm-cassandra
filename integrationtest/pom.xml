@@ -2,11 +2,11 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.hibernate.ogm</groupId>
-        <artifactId>hibernate-ogm-contrib-parent</artifactId>
+        <artifactId>hibernate-ogm-cassandra-parent</artifactId>
         <version>5.2.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>hibernate-ogm-contrib-integrationtest</artifactId>
+    <artifactId>hibernate-ogm-cassandra-integrationtest</artifactId>
     <name>Hibernate OGM Integration and performance Tests</name>
     <description>Hibernate OGM integration and performance tests</description>
 
@@ -125,7 +125,7 @@
                                     </artifactItem>
                                     <artifactItem>
                                         <groupId>${project.groupId}</groupId>
-                                        <artifactId>hibernate-ogm-contrib-modules</artifactId>
+                                        <artifactId>hibernate-ogm-cassandra-modules</artifactId>
                                         <classifier>${hibernateWildflyClassifier}</classifier>
                                         <version>${project.version}</version>
                                         <type>zip</type>

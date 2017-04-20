@@ -10,12 +10,12 @@
 
     <parent>
         <groupId>org.hibernate.ogm</groupId>
-        <artifactId>hibernate-ogm-contrib-documentation</artifactId>
+        <artifactId>hibernate-ogm-cassandra-documentation</artifactId>
         <version>5.2.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>hibernate-ogm-contrib-javadoc</artifactId>
+    <artifactId>hibernate-ogm-cassandra-javadoc</artifactId>
     <packaging>jar</packaging>
 
     <name>Hibernate OGM Cotrib Javadoc</name>

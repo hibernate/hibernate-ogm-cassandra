@@ -35,7 +35,7 @@ Support:
 
 ## Build instructions
 
-The code is available on GitHub at <https://github.com/hibernate/hibernate-ogm-contrib>.
+The code is available on GitHub at <https://github.com/hibernate/hibernate-ogm-cassandra>.
 
 To run the full project build including tests for all backends, documentation etc. execute:
 
