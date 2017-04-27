@@ -1,4 +1,4 @@
-# Hibernate OGM Contrb
+# Hibernate OGM Cassandra
 
 *Version: 5.1.0.Final - 01-03-2017*
 
