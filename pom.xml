@@ -22,6 +22,7 @@
 
     <modules>
         <module>cassandra</module>
+        <module>modules</module>
     </modules>
 
     <properties>
@@ -75,6 +76,11 @@
          managed in the BOM -->
     <dependencyManagement>
         <dependencies>
+            <dependency>
+                <groupId>org.hibernate.ogm</groupId>
+                <artifactId>hibernate-ogm-cassandra</artifactId>
+                <version>${project.version}</version>
+            </dependency>
             <dependency>
                 <groupId>junit</groupId>
                 <artifactId>junit</artifactId>
@@ -746,16 +752,6 @@
     </repositories>
 
     <profiles>
-        <profile>
-            <id>non-jigsaw</id>
-            <activation>
-                <jdk>1.8</jdk>
-            </activation>
-            <modules>
-                <!-- The WildFly modules require the other modules to be enabled too -->
-                <module>modules</module>
-            </modules>
-        </profile>
         <profile>
             <id>jigsaw</id>
             <activation>

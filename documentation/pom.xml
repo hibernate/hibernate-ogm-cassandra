@@ -19,7 +19,7 @@
     <artifactId>hibernate-ogm-cassandra-documentation</artifactId>
     <packaging>pom</packaging>
 
-    <name>Hibernate OGM Documentation</name>
+    <name>Hibernate OGM Cassandra Documentation</name>
     <description>Grouping of Hibernate OGM Project documentation modules</description>
 
     <properties>
@@ -29,6 +29,7 @@
 
     <modules>
         <module>manual</module>
+        <module>examples</module>
         <module>javadoc</module>
     </modules>
 

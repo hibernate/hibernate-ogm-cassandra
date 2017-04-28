@@ -1,13 +1,14 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <parent>
-        <artifactId>hibernate-ogm-documentation-examples</artifactId>
+        <artifactId>hibernate-ogm-cassandra-documentation-examples</artifactId>
         <groupId>org.hibernate.ogm</groupId>
         <version>5.2.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>hibernate-ogm-documentation-examples-gettingstarted</artifactId>
-    <name>Hibernate OGM Getting Started</name>
+    <artifactId>hibernate-ogm-cassandra-documentation-examples-gettingstarted</artifactId>
+    <name>Hibernate OGM EhCache Getting Started</name>
     <description>Full code for the Getting Started Guide</description>
 
     <dependencyManagement>
@@ -25,7 +26,12 @@
     <dependencies>
         <dependency>
             <groupId>org.hibernate.ogm</groupId>
-            <artifactId>hibernate-ogm-infinispan</artifactId>
+            <artifactId>hibernate-ogm-cassandra</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-search-orm</artifactId>
         </dependency>
         <dependency>
             <groupId>org.jboss.spec.javax.transaction</groupId>
@@ -54,4 +60,13 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+    </build>
 </project>

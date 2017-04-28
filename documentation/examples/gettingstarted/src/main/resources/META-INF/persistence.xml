@@ -9,10 +9,9 @@
         <provider>org.hibernate.ogm.jpa.HibernateOgmPersistence</provider>
         <properties>
             <!-- Here you will pick which NoSQL technology to use, and configure it;
-                 in this example we start a local in-memory Infinispan node. -->
-            <property name="hibernate.ogm.datastore.provider" value="infinispan_embedded"/>
-            <!-- The following is not necessary, the purpose is to run the test quickly -->
-            <property name="hibernate.ogm.infinispan.configuration_resource_name" value="infinispan-local.xml"/>
+                 in this example we connect to a local Cassandra. -->
+            <property name="hibernate.ogm.datastore.provider" value="org.hibernate.ogm.datastore.cassandra.impl.CassandraDatastoreProvider"/>
+            <property name="hibernate.ogm.datastore.database" value="gettingstarted_db"/>
         </properties>
     </persistence-unit>
 </persistence>
