@@ -9,7 +9,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>org.hibernate.ogm</groupId>
-        <artifactId>hibernate-ogm-parent</artifactId>
+        <artifactId>hibernate-ogm-cassandra-parent</artifactId>
         <version>5.2.0-SNAPSHOT</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
@@ -18,7 +18,7 @@
     <packaging>pom</packaging>
 
     <name>Hibernate OGM Cassandra Distribution</name>
-    <description>Creates the distribution package for Hibernate OGM contrib</description>
+    <description>Creates the distribution package for Hibernate OGM Cassandra</description>
 
     <properties>
         <assembly.name>hibernate-ogm-cassandra-${project.version}</assembly.name>
