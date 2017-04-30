@@ -8,8 +8,33 @@
     </parent>
 
     <artifactId>hibernate-ogm-cassandra-documentation-examples-gettingstarted</artifactId>
-    <name>Hibernate OGM EhCache Getting Started</name>
+    <name>Hibernate OGM Cassandra Getting Started</name>
     <description>Full code for the Getting Started Guide</description>
+
+    <profiles>
+        <profile>
+            <id>default_host</id>
+            <activation>
+                <property>
+                    <name>!env.CASSANDRA_HOSTNAME</name>
+                </property>
+            </activation>
+            <properties>
+                <casssandra.host>localhost:9042</casssandra.host>
+            </properties>
+        </profile>
+        <profile>
+            <id>custom_host</id>
+            <activation>
+                <property>
+                    <name>env.CASSANDRA_HOSTNAME</name>
+                </property>
+            </activation>
+            <properties>
+                <casssandra.host>${env.CASSANDRA_HOSTNAME}:${env.CASSANDRA_PORT}</casssandra.host>
+            </properties>
+        </profile>
+    </profiles>
 
     <dependencyManagement>
         <dependencies>
