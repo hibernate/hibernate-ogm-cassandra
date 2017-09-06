@@ -7,6 +7,7 @@ org.hibernate.ogm.backendtck.callbacks.PostLoadTest
 org.hibernate.ogm.backendtck.queries.QueriesWithEmbeddedCollectionTest
 org.hibernate.ogm.backendtck.queries.QueriesWithEmbeddedTest
 org.hibernate.ogm.backendtck.optimisticlocking.OptimisticLockingExtraTest
+org.hibernate.ogm.backendtck.inheritance.tableperclass.depositor.PolymorphicAssociationTest
 
 # Composite PKs in associations not yet supported
 org.hibernate.ogm.backendtck.associations.collection.manytomany.ManyToManyTest#testManyToManyCompositeId

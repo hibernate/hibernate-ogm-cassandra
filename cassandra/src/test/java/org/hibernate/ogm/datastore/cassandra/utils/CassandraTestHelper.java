@@ -272,6 +272,10 @@ public class CassandraTestHelper implements GridDialectTestHelper {
 		return new RowAssertionBuilder( sessionFactory, table );
 	}
 
+	@Override
+	public void prepareDatabase(SessionFactory sessionFactory) {
+	}
+
 	/**
 	 * A builder that allows to easily construct assertions about rows in a Cassandra table.
 	 *
@@ -333,5 +337,4 @@ public class CassandraTestHelper implements GridDialectTestHelper {
 		}
 
 	}
-
 }

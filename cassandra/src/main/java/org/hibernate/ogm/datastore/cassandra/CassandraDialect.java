@@ -502,6 +502,10 @@ public class CassandraDialect extends BaseGridDialect implements GridDialect, Qu
 		@Override
 		public void close() {
 		}
+
+		@Override
+		public void remove() {
+		}
 	}
 
 	private static Tuple createTuple(Row row) {
