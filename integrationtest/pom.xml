@@ -191,6 +191,7 @@
             <groupId>org.hibernate.ogm</groupId>
             <artifactId>hibernate-ogm-integrationtest</artifactId>
             <type>test-jar</type>
+            <optional>true</optional>
             <scope>test</scope>
         </dependency>
         <dependency>
