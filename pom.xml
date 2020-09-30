@@ -11,7 +11,7 @@
     <parent>
         <groupId>org.hibernate.ogm</groupId>
         <artifactId>hibernate-ogm-bom</artifactId>
-        <version>5.3.0.Final</version>
+        <version>5.3.2-SNAPSHOT</version>
     </parent>
 
     <artifactId>hibernate-ogm-cassandra-parent</artifactId>
@@ -743,31 +743,6 @@
             </plugins>
         </pluginManagement>
     </build>
-
-  	<repositories>
-  		<repository>
-  			<id>jboss</id>
-  			<name>JBoss nexus</name>
-  			<url>http://repository.jboss.org/nexus/content/groups/public/</url>
-  			<releases>
-  				<enabled>true</enabled>
-  			</releases>
-  			<snapshots>
-  				<enabled>true</enabled>
-  			</snapshots>
-  		</repository>
-  		<repository>
-  			<id>jboss-snapshots</id>
-  			<name>JBoss snapshots</name>
-  			<url>https://snapshots.jboss.org/maven2/</url>
-  			<releases>
-  				<enabled>false</enabled>
-  			</releases>
-  			<snapshots>
-  				<enabled>true</enabled>
-  			</snapshots>
-  		</repository>
-    </repositories>
 
     <profiles>
         <profile>
