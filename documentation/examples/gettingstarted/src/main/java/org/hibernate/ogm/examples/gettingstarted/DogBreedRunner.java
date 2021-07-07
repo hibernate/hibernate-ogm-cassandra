@@ -15,10 +15,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.transaction.TransactionManager;
+import java.lang.invoke.MethodHandles;
 
 public class DogBreedRunner {
 
-	private static final Log logger = LoggerFactory.make();
+	private static final Log logger = LoggerFactory.make( MethodHandles.lookup() );
 
 	public static void main(String[] args) {
 
