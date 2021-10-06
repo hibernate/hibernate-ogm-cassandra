@@ -6,19 +6,18 @@
  */
 package org.hibernate.ogm.datastore.cassandra.query.impl;
 
-import java.util.Map;
-
-import org.hibernate.boot.model.naming.Identifier;
-import org.hibernate.engine.query.spi.OrdinalParameterDescriptor;
-import org.hibernate.engine.query.spi.ParameterMetadata;
-import org.hibernate.mapping.Column;
-import org.hibernate.mapping.Table;
-import org.hibernate.ogm.dialect.query.spi.ParameterMetadataBuilder;
-import org.hibernate.type.Type;
-
 import com.datastax.driver.core.ColumnDefinitions;
 import com.datastax.driver.core.PreparedStatement;
 import com.datastax.driver.core.Session;
+import org.hibernate.boot.model.naming.Identifier;
+import org.hibernate.engine.query.spi.OrdinalParameterDescriptor;
+import org.hibernate.mapping.Column;
+import org.hibernate.mapping.Table;
+import org.hibernate.ogm.dialect.query.spi.ParameterMetadataBuilder;
+import org.hibernate.query.internal.ParameterMetadataImpl;
+import org.hibernate.type.Type;
+
+import java.util.Map;
 
 /**
  * {@link ParameterMetadataBuilder} for native Cassandra CQL queries.
@@ -37,7 +36,7 @@ public class CassandraParameterMetadataBuilder implements ParameterMetadataBuild
 	}
 
 	@Override
-	public ParameterMetadata buildParameterMetadata(String nativeQuery) {
+	public ParameterMetadataImpl buildParameterMetadata(String nativeQuery) {
 		PreparedStatement preparedStatement = session.prepare( nativeQuery );
 		ColumnDefinitions columnDefinitions = preparedStatement.getVariables();
 		OrdinalParameterDescriptor[] ordinalDescriptors = new OrdinalParameterDescriptor[columnDefinitions.size()];
@@ -61,6 +60,6 @@ public class CassandraParameterMetadataBuilder implements ParameterMetadataBuild
 			}
 		}
 
-		return new ParameterMetadata( ordinalDescriptors, null );
+		return new ParameterMetadataImpl( ordinalDescriptors, null );
 	}
 }
