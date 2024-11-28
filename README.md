@@ -2,6 +2,10 @@
 
 *Version: 5.2.0.Alpha1 - 08-09-2017*
 
+## Archived
+
+Hibernate OGM has not been kept up to date with the latest Hibernate ORM versions and is not maintained anymore. If community members have interest in maintaining it, please [contact us](https://hibernate.org/community/).
+
 ## Description
 
 This project integrates [Hibernate OGM](http://hibernate.org/ogm/) with [Apache Cassandra](http://cassandra.apache.org/).
